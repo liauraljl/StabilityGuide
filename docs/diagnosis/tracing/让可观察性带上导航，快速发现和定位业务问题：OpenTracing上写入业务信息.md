@@ -93,6 +93,22 @@ private static Tracer tracer = new SkywalkingTracer();
   }
 ```
 
+* Java 代码方式
+
+```java
+ActiveSpan.tag("userId", yourUserId);
+```
+
+* Java 注解方式
+
+```java
+@Tag(key = "userId", value = "arg[0]")
+@Tag(key = "requestId", value = "arg[1]")
+public someMethod(final String userId, final String requestId) {
+    // ...
+}
+```
+
 
 ## 对链路数据进行业务分析
 Tag 信息就好比给图书打上编号分类信息，让我们可以在图书馆海量的图书中找到我们需要图书。 通过 Tag 来进行分类、查找、统计，可以快速找到我们需要的数据。
@@ -158,6 +174,6 @@ Tag 功能主要是业务开发同学用来进行业务监控的， 通过在链
 
 * [GitHub 地址](https://github.com/StabilityMan/StabilityGuide)
 * 钉钉群号：
-	* 23168197（2群，推荐）
+	* 30000312（2群，推荐）
 	* 23179349（1群，已满）
 * 如果阅读本文有所收获，欢迎分享给身边的朋友，期待更多同学的加入！
